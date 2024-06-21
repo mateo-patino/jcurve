@@ -3,8 +3,8 @@ from modules.helpers_curves import verify_view_bounds, compute_curves, export_da
 import matplotlib.pyplot as plt
 
 # CURVE VISUALIZATION
-VIEW_BOUNDS = [0, 800, -500, 300]
 VIEW = True
+VIEW_BOUNDS = [0, 800, -500, 300]
 ADD_DIVERGENCE_MOTION = True
 ADD_TEXTBOX = True
 ADD_BEST_FIT = True
