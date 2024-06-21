@@ -18,9 +18,9 @@ Y.append(y0)
 # calculate U0 (y'(x) at t = 0) and append to U array
 try:
     U0 = -1 * (a0/g) / sqrt(1 - pow(a0/g, 2))
-except Exception as e:
-    exit(f"An error occurred: {e}. Physically impossible initial conditions "
-         "may cause some equations to break down. Try different initial conditions.")
+except (ValueError, ZeroDivisionError):
+    exit(f"An error occurred calculating the initial value of U-prime. INITIAL_ACCELERATION cannot "
+         "be greater than or equal to GRAVITATIONAL_ACCELERATION. Try a smaller value for the object's initial acceleration. ")
 U.append(U0)
 
 
