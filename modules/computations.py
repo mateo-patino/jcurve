@@ -13,7 +13,7 @@ def Uprime(u, y):
         return factor1 * factor2
     except OverflowError:
         exit(f"Math Overflow error: the curve is becoming infinitely steep, breaking down some equations."
-             f"Try using a shorter curve by decreasing xmax in inputParams.py")
+             f"Try using a shorter curve by decreasing CURVE_HORIZONTAL_LENGTH in inputParams.py")
 
 # speed as a function of y
 def speed(u, y):
