@@ -35,6 +35,6 @@ Like all numerically-simulated physical scenarios, our code requires initial phy
 8. `STEP_SIZE`: the horizontal step size for running the RK4 simulation; recommended values 0.1 > ss > 0.001.
 9. `TIME_INCREMENT`: the time step size for running the kinematics simulation; recommended values 0.1 > dt > 0.001
 10. `DECIMALS_TO_ROUND`: the number of decimal places to round values output through the terminal and in the output CSV files.
-11. `Q_FACTOR:` the moment of inertia factor (set to `1` if the object is not rolling).
+11. `Q_FACTOR`: the moment of inertia factor (set to `1` if the object is not rolling).
 
 
