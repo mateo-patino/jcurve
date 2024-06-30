@@ -24,16 +24,16 @@ Both `curves.py` and `hodograph.py` have different features that give you contro
 ### Setting initial conditions
 
 Like all numerically-simulated physical scenarios, our code requires initial physical conditions to run. The `inputParams.py` file contains __eleven__ variables that you may modify to indicate what the initial conditions are. 
-`TANGENTIAL_JERK`: the tangential component of jerk which is to be held constant throughout the curve.
-`GRAVITATIONAL_ACCELERATION`: the acceleration due to Earth's gravitational field (little g).
-`INITIAL_ACCELERATION`: the magnitude of acceleration at time = 0.
-`INITIAL_SPEED`: the magnitude of the velocity at time = 0.
-`INITIAL_HEIGHT`: the magnitude of the position at time = 0.
-`CURVE_HORIZONTAL_LENGTH`: the length along the x axis of the curve; modifying this value makes the curve longer or shorter horizontally.
-`TIME_DURATION`: the amount of time for which to run the kinematics equations to simulate the kinematics-based curve.
-`STEP_SIZE`: the horizontal step size for running the RK4 simulation; recommended values 0.1 > ss > 0.001.
-`TIME_INCREMENT`: the time step size for running the kinematics simulation; recommended values 0.1 > dt > 0.001
-`DECIMALS_TO_ROUND`: the number of decimal places to round values output through the terminal and in the output CSV files.
-`Q_FACTOR:` the moment of inertia factor (CHECK).
+1. `TANGENTIAL_JERK`: the tangential component of jerk which is to be held constant throughout the curve.
+2. `GRAVITATIONAL_ACCELERATION`: the acceleration due to Earth's gravitational field (little g).
+3. `INITIAL_ACCELERATION`: the magnitude of acceleration at time = 0.
+4. `INITIAL_SPEED`: the magnitude of the velocity at time = 0.
+5. `INITIAL_HEIGHT`: the magnitude of the position at time = 0.
+6. `CURVE_HORIZONTAL_LENGTH`: the length along the x axis of the curve; modifying this value makes the curve longer or shorter horizontally.
+7. `TIME_DURATION`: the amount of time for which to run the kinematics equations to simulate the kinematics-based curve.
+8. `STEP_SIZE`: the horizontal step size for running the RK4 simulation; recommended values 0.1 > ss > 0.001.
+9. `TIME_INCREMENT`: the time step size for running the kinematics simulation; recommended values 0.1 > dt > 0.001
+10. `DECIMALS_TO_ROUND`: the number of decimal places to round values output through the terminal and in the output CSV files.
+11. `Q_FACTOR:` the moment of inertia factor (set to `1` if the object is not rolling).
 
 
