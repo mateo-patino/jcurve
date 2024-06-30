@@ -17,21 +17,23 @@ As a user, there are two ways to interact with our code: by running `curves.py` 
 
 Both `curves.py` and `hodograph.py` have different features that give you control over the hodograph animation and the curves displayed, respectively. To interact with these features, you will have to change certain variables in the source code of `curves.py` and `hodograph.py` and then run the programs. Therefore, we recommend you install [Visual Studio Code](https://code.visualstudio.com), [PyCharm](https://www.jetbrains.com/pycharm/), or any other code editor in order to modify the programs' code and run them through a command-line terminal. Instructions on how to execute each program are provided below.
 
-Like all numerically-simulated physical scenarios, our code requires initial physical conditions to run. The `inputParams.py` file contains __eleven__ variables that you may modify to indicate what the initial conditions are. 
-```
-TANGENTIAL_JERK = 0.5
-GRAVITATIONAL_ACCELERATION = 9.81
-INITIAL_ACCELERATION = 0.1
-INITIAL_SPEED = 1
-INITIAL_HEIGHT = 300
-CURVE_HORIZONTAL_LENGTH = 800
-TIME_DURATION = 19
-STEP_SIZE = 0.01
-TIME_INCREMENT = 0.01
-DECIMALS_TO_ROUND = 5
-Q_FACTOR = 1
-```
-
 ### Instructions and examples
 - [`curves.py`](https://github.com/MateoGitIt/constant-jerk-curve/wiki/How-to-use-curves.py)
 - [`hodograph.py`](https://github.com/MateoGitIt/constant-jerk-curve/wiki/How-to-use-hodograph.py)
+
+### Setting initial conditions
+
+Like all numerically-simulated physical scenarios, our code requires initial physical conditions to run. The `inputParams.py` file contains __eleven__ variables that you may modify to indicate what the initial conditions are. 
+`TANGENTIAL_JERK`: the tangential component of jerk which is to be held constant throughout the curve.
+`GRAVITATIONAL_ACCELERATION`: the acceleration due to Earth's gravitational field (little g).
+`INITIAL_ACCELERATION`: the magnitude of acceleration at time = 0.
+`INITIAL_SPEED`: the magnitude of the velocity at time = 0.
+`INITIAL_HEIGHT`: the magnitude of the position at time = 0.
+`CURVE_HORIZONTAL_LENGTH`: the length along the x axis of the curve; modifying this value makes the curve longer or shorter horizontally.
+`TIME_DURATION`: the amount of time for which to run the kinematics equations to simulate the kinematics-based curve.
+`STEP_SIZE`: the horizontal step size for running the RK4 simulation; recommended values 0.1 > ss > 0.001.
+`TIME_INCREMENT`: the time step size for running the kinematics simulation; recommended values 0.1 > dt > 0.001
+`DECIMALS_TO_ROUND`: the number of decimal places to round values output through the terminal and in the output CSV files.
+`Q_FACTOR:` the moment of inertia factor (CHECK).
+
+
