@@ -18,7 +18,7 @@ As a user, there are two ways to interact with our code: by running `curves.py` 
 Both `curves.py` and `hodograph.py` have different features that give you control over the hodograph animation and the curves displayed, respectively. To interact with these features, you will have to change certain variables in the source code of `curves.py` and `hodograph.py` and then run the programs. Therefore, we recommend you install [Visual Studio Code](https://code.visualstudio.com), [PyCharm](https://www.jetbrains.com/pycharm/), or any other code editor in order to modify the programs' code and run them through a command-line terminal. Instructions on how to execute each program are provided below. 
 
 ### Instructions and examples
-- [`curves.py - curve visualization`](https://github.com/MateoGitIt/constant-jerk-curve/wiki/How-to-use-curves.py)
+- [`curves.py - curve visualization`](https://github.com/MateoGitIt/constant-jerk-curve/wiki/How-to-use-curves.py-%7C-Curve-visualization)
 - [`curves.py - output data file`](https://github.com/MateoGitIt/constant-jerk-curve/wiki/How-to-use-curves.py-%7C-Data-output-file)
 - [`hodograph.py`](https://github.com/MateoGitIt/constant-jerk-curve/wiki/How-to-use-hodograph.py)
 
