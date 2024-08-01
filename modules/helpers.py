@@ -237,14 +237,8 @@ def divergence_point(X, Y, U):
 
 
 def parse_vector_input(vectors, color_list):
-    xy_vectors = []
-    tang_norm_vectors = []
-    xy_scales = {}
-    tang_norm_scales = {}
-    total_scales = {}
-    total_colors = {}
-    xy_colors = {}
-    tang_norm_colors = {}
+    xy_vectors, tang_norm_vectors = [[] for _ in range(2)]
+    xy_scales, tang_norm_scales, total_scales, total_colors, xy_colors, tang_norm_colors = [{} for _ in range(6)]
     for i, v in enumerate(vectors):
         total_colors[i] = color_list[i]
         total_scales[i] = v[1]
