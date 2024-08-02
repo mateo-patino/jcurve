@@ -257,12 +257,12 @@ def parse_vector_input(vectors, color_list):
 
 
 def plot_divergent_free_fall(ax, x, y, X_parabolic, Y_parabolic):
-    ax.scatter(x, y, marker="x", s=30, color="black", zorder=3)
+    ax.scatter(x, y, marker="x", label="Divergence point", s=30, color="black", zorder=3)
     ax.plot(X_parabolic, Y_parabolic, linestyle="dotted", color="gray", label="Parabolic free fall", zorder=1)
 
 
 def print_divPoint(x, y, radial_accel, normal_gravity_accel, speed):
-    print(f"Divergence point (marked by black 'X'): (x, y) = ({x}, {y})")
+    print(f"Divergence point: (x, y) = ({x}, {y})")
     print(f"radial accel. due to curvature: {radial_accel} m/s^2")
     print(f"normal accel. due to gravity: {normal_gravity_accel} m/s^2")
     print(f"speed: {speed} m/s")
