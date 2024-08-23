@@ -4,7 +4,7 @@ from sys import exit
 import numpy as np
 
 
-Jt, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, decs = parameters.values()
+Jt, jerk_eq, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, decs = parameters.values()
 
 # declare time, X and Y arrays
 X = []

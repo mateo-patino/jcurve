@@ -2,18 +2,25 @@ from inputParams import parameters
 from math import sqrt, pow, sin, cos, atan
 import numpy as np
 
-Jt, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, rounding_decimals = parameters.values()
+Jt, jerk_eq, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, rounding_decimals = parameters.values()
 
-# right-hand side of the autonomous differential equation for y''(x) = U'(x)
+# right-hand side of the autonomous differential equation
 def Uprime(u, y):
     try:
-        factor1 = Jf * (1 + pow(u, 2)) / (2 * pow(speed(u, y), 2))
-        radicand = pow(g/Q, 2) - (Jf * 4 * speed(u, y) * Jt * (1 + pow(u, 2)))
-        factor2 = (-1 * g/Q) + sqrt(radicand)
-        return factor1 * factor2
+        if jerk_eq == "tangential":
+            factor1 = Jf * (1 + pow(u, 2)) / (2 * pow(speed(u, y), 2))
+            radicand = pow(g/Q, 2) - (Jf * 4 * speed(u, y) * Jt * (1 + pow(u, 2)))
+            factor2 = (-1 * g/Q) + sqrt(radicand)
+            return factor1 * factor2
+        elif jerk_eq == "scalar":
+            factor1=-Jt*Q/(g*speed(u,y))
+            factor2=(1+pow(u, 2))**2
+            return factor1 * factor2
+        else:
+            exit("JERK_EQUATION must be either 'scalar' or 'tangential'.")
     except OverflowError:
         exit(f"Math Overflow error: the curve is becoming infinitely steep, breaking down some equations."
-             f"Try using a shorter curve by decreasing CURVE_HORIZONTAL_LENGTH in inputParams.py")
+            f"Try using a shorter curve by decreasing xmax in inputParams.py")
 
 # speed as a function of y
 def speed(u, y):

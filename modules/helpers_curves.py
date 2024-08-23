@@ -1,6 +1,6 @@
 from modules.rungekutta import rungekutta_main
 from modules.simulated import simulated_main
-from modules.components import tangential_accel2, normal_accel2, tangential_jerk, normal_jerk, components_file_local_copy
+from modules.components import tangential_accel2, normal_accel2, tangential_jerk, components_file_local_copy
 from modules.computations import local_angle
 from math import degrees
 from inputParams import parameters
@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 import csv
 
-Jt, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, rounding_decimals = parameters.values()
+Jt, jerk_eq, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, rounding_decimals = parameters.values()
 
 def verify_view_bounds(bounds):
     for b in bounds:

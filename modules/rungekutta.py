@@ -5,7 +5,7 @@ from modules.computations import Uprime
 import numpy as np
 
 
-Jt, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, decs = parameters.values()
+Jt, jerk_eq, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, decs = parameters.values()
 
 # declare array for U_i, Y_i, and X_i values
 U = []

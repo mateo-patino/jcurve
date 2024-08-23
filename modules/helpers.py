@@ -12,7 +12,7 @@ import modules.model_funcs as mf
 import modules.components as com
 import modules.computations as compute
 
-Jt, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, decs = parameters.values()
+Jt, jerk_eq, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, decs = parameters.values()
 pause_state = False
 final_frame = 0
 pause_keys = ['p', 'enter', 'escape']
@@ -27,13 +27,13 @@ def create_plot(type, ax, data=[], div=(False, 0, 0, 0, 0), view=(False, 0, 0, 0
 
     if type == "rk4":
         ax.plot(data[0], data[1], lw=2, label="y(x)", color="tab:red", zorder=2)
-        ax.set_title("Runge-Kutta 4 y(x) curve")
+        ax.set_title(f"Runge-Kutta 4 solution surface")
         if div[0] and (div[1], div[2]) != (None, None): 
             X_parabolic, Y_parabolic = compute.parabolic_free_fall((div[1], div[2]), div[3], div[4], 1000)
             plot_divergent_free_fall(ax, div[1], div[2], X_parabolic, Y_parabolic)
     elif type == "kinematics":
         ax.plot(data[0], data[1], label="y(x)", lw=2, color="tab:blue", zorder=2)
-        ax.set_title("Simulated y(x) curve from kinematic equations")
+        ax.set_title("Surface from kinematic equations (scalar jerk)")
 
     if view_setting:
         set_view(ax, [x1, x2, y1, y2])

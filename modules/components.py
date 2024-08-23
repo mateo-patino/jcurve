@@ -3,7 +3,7 @@ from math import sqrt, pow, sin, cos, atan
 from modules.computations import Uprime, speed, Udoubleprime
 import numpy as np
 
-Jt, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, rounding_decimals = parameters.values()
+Jt, jerk_eq, Jf, Q, g, a0, v0, y0, xmax, tmax, h, dt, rounding_decimals = parameters.values()
 U_origins_cpy = None
 Y_origins_cpy = None
 X_origins_cpy = None
