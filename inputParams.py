@@ -1,5 +1,6 @@
 # PROVIDE THE INITIAL PHYSICAL CONDITIONS FOR SIMULATING THE CONSTANT-JERK CURVE. 
-TANGENTIAL_JERK = 0.5
+JERK_MAGNITUDE = 0.5
+JERK_EQUATION = "scalar"
 GRAVITATIONAL_ACCELERATION = 9.81
 INITIAL_ACCELERATION = 0.1
 INITIAL_SPEED = 1
@@ -11,10 +12,11 @@ TIME_INCREMENT = 0.01
 DECIMALS_TO_ROUND = 5
 Q_FACTOR = 1
 
-if TANGENTIAL_JERK <= 0: jerkfactor = 1
+if JERK_MAGNITUDE <= 0: jerkfactor = 1
 else: jerkfactor = -1
 
-parameters = {"j_t":  TANGENTIAL_JERK, 
+parameters = {"j_t":  JERK_MAGNITUDE, 
+              "jerk_eq": JERK_EQUATION,
               "j_f": jerkfactor,
               "Q": Q_FACTOR, 
               "g": GRAVITATIONAL_ACCELERATION, 
