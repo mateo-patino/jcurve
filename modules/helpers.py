@@ -63,7 +63,7 @@ def create_fit_curve(model, ax, initial_guess, x1, x2, data=[], curve_tag=""):
     X_reg_left = np.linspace(x1, round(data[0][0]), 1000)
     X_reg_right = np.linspace(round(data[0][-1]), x2, 1000)
 
-    label_text = f"{model} R^2={sf.round(r2_coefficient(Y_reg, data[1]), 5)}"
+    label_text = f"{model} R^2={sf.round(r2_coefficient(Y_reg, data[1]), decs)}"
     line_color = ax._get_lines.get_next_color()
     ax.plot(data[0], Y_reg, "--", color=line_color, label=label_text, zorder=1)
     ax.plot(X_reg_left, mf.models[model](X_reg_left, *popt), "--", color=line_color, zorder=1)
