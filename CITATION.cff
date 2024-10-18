@@ -1,0 +1,20 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Jcurve
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Mateo
+    family-names: Patino
+    email: mateo.patino25@thorntonacademy.org
+    affiliation: Thornton Academy
+    orcid: 'https://orcid.org/0009-0002-0508-279X'
+  - given-names: Clinton
+    family-names: Nash
+    email: clinton.nash@thorntonacademy.org
+    affiliation: Thornton Academy
+repository-code: 'https://github.com/mateo-patino/jcurve'
