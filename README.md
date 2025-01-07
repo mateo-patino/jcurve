@@ -1,5 +1,5 @@
 # Modelling a Constant-Jerk Curve 🎢
-This repository contains code for the paper "**Jerk, Speed, and Acceleration Inclined Surfaces**." The Python scripts here implement a tool to visualize the constant-jerk _y=y(x)_ curve presented in the paper. A hodograph of the jerk and acceleration vectors for an object traveling along the curve is also available.
+This repository contains code for the paper "**Jerk, Speed, and Acceleration on Inclined Surfaces**." The Python scripts here implement a tool to visualize the constant-jerk _y=y(x)_ curve presented in the paper. A hodograph of the jerk and acceleration vectors for an object traveling along the curve is also available.
 
 ## Installation
 Our code requires [Python3](https://www.python.org/downloads/) and certain external libraries ("dependencies") to run. First, make sure you have Python3 installed in your system. Then, install our code's dependencies by running 
